@@ -5,10 +5,8 @@
 }
 
 .section {
-  /* background-color: red; */
 }
 .container {
-  /* background-color: green; */
   --variableName: 64px;
   max-width: calc(
     1200px + 2 * var(--variableName)
@@ -17,7 +15,6 @@
   padding-inline: var(--variableName);
 }
 .wrapper {
-  /* background-color: blue; */
   padding-block: 64px;
 }
 

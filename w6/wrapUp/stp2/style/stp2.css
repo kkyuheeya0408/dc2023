@@ -39,14 +39,12 @@ body {
 }
 
 .nav {
-  /* background-color: black; */
   color: white;
   font-weight: 700;
 }
 
 .nav__menu,
 .nav__logo {
-  /* color: blue; */
 }
 
 .nav .container {
