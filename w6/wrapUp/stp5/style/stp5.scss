@@ -5,17 +5,14 @@
 }
 
 .section {
-  /* background-color: red; */
 }
 .container {
-  /* background-color: green; */
   $padding-inline-value: 64px;
   max-width: 1200px + 2 * $padding-inline-value;
   margin-inline: auto;
   padding-inline: $padding-inline-value;
 }
 .wrapper {
-  /* background-color: blue; */
   padding-block: 64px;
 }
 
