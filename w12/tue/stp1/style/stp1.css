@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  /* 보더박스를 많이 씀 기준으로 씀 */
+}
+
+html {
+  color-scheme: light dark;
+}
+
+/* 상속되는 종류 패밀리, 색갈 등 상속됨
+패딩이나 마진은 자식요소에게 상속되지 않음 */
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0;
+}
+/* 웹상에선 읽기 좋은 포인트는 18픽셀 */
+
+main {
+  margin-inline: auto;
+  /* padding-inline: 2rem;
+  max-width: 60ch; */
+  /* ch는 현재 내가 고른 서체의 글꼴사이즈 기준으로 60글자 들어가는 너비 
+  (한 줄에 0이 60개 들어가는 거임) */
+  width: min(70ch, 100%-2 * 32px);
+  /* css에서 쓰는 함수 min에 값을 써야하고 더 작은 애를 보여줌*/
+}
+
+/* 이미지는 텍스트 영역임 인라인이 있으면 이미지와 텍스트 사이에 틈새가 생김
+디스플레이를 블록으로 설정하면 됨 아래 것들은 인라인으로 절대하면 안되고 디스플레이로 해야됨 */
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
