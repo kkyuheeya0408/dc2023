@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.section {
+  background-color: antiquewhite;
+}
+
+.section:nth-child(even) {
+  background-color: lavender;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 37.5rem;
+  min-height: max(100dvh, 37.5rem);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; 로띠 예제 글씨 가운데*/
+}
+
+.lottie {
+  max-width: 100%;
+}
+
+#lottie1 {
+  width: 300px;
+}
