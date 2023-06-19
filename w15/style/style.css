@@ -93,9 +93,9 @@ img {
   font-size: 0.875rem;
   line-height: 0.875rem;
   font-weight: bold;
-  background-color: rgba(103, 64, 210, 0.391);
+  background-color: rgba(86, 60, 200, 0.337);
   color: rgba(255, 255, 255, 0.87);
-  border-radius: 62.4375rem;
+  border-radius: 0;
   transition: background-color 300ms ease;
 }
 .button:hover {
@@ -103,7 +103,7 @@ img {
 }
 .button--type-text {
   background-color: unset;
-  color: rgba(103, 64, 210, 0.352);
+  color: rgba(86, 60, 200, 0.318);
   padding-inline: 0.5rem;
   transition: color 300ms ease;
 }
