@@ -1,0 +1,442 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable scss/dollar-variable-pattern */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$bg-light: #fffbff;
+$txt-light: #1b1b1f;
+$surface-opacity-light: rgb(246 242 247 / 50%);
+$surface-light: rgb(246 242 247);
+$onSurface-light: #1b1b1f;
+$onSurfaceHover-light: #4756b2;
+$bgVariant-light: #e3e1ec;
+$bg-dark: #1b1b1f;
+$txt-dark: #e4e1e6;
+$surface-opacity-dark: rgb(27 27 31 / 50%);
+$surface-dark: #131316;
+$onSurface-dark: #c8c5ca;
+$onSurfaceHover-dark: #bbc3ff;
+$bgVariant-dark: #46464f;
+$page-height: max(100dvh, 37.5rem);
+
+.hide {
+  display: none;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  min-width: 15rem;
+  background-color: oklch(98% 0.013 322);
+  border: 1px solid oklch(83% 0.018 308);
+  transition: background-color 500ms ease-out, box-shadow 500ms ease-out;
+}
+.card-selected {
+  background-color: oklch(97% 0.012 313);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+.card-selected .card__imgWrap:before {
+  opacity: 0.25;
+}
+.card__top {
+  padding: 0.75rem 0.25rem 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__top__wrap-1 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.card__top__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: oklch(50% 0.13 294);
+  color: oklch(98 0.013 322);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+}
+.card__top__wrap-2 {
+  flex-grow: 1;
+}
+.card__top__header {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+}
+.card__top__subheader {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+}
+.card__top__option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: oklch(57% 0.016 308);
+}
+.card__imgWrap {
+  position: relative;
+}
+.card__imgWrap:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1000rem oklch(80% 0.13 294) inset;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+.card__img {
+  display: block;
+  width: 100%;
+  max-height: 11.75rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.card__bottom__title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+}
+.card__bottom__subheader {
+  color: oklch(40% 0.017 304);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+}
+.card__bottom__wrap-2 {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.iconButton {
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border-radius: 1000rem;
+  padding: 0.625rem 1.5rem;
+  background-color: oklch(50% 0.13 294);
+  color: oklch(98 0.013 322);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.button--type-outline {
+  background-color: unset;
+  color: oklch(50% 0.13 294);
+  border: 1px solid oklch(57% 0.016 308);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80ch;
+  min-height: $page-height;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+header {
+  h1 {
+    text-align: center;
+    text-wrap: balance;
+  }
+}
+
+.stickyWrap {
+  display: grid;
+  position: relative;
+  grid-template-columns:
+    fit-content(0)
+    1fr;
+  grid-template-rows: 1fr;
+}
+
+main {
+  z-index: 1;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+aside {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  grid-column: 1;
+  grid-row: 1;
+  width: fit-content;
+  height: max(100dvh, 37.5rem);
+  padding-inline: 1rem 1.5rem;
+  border-radius: 0 0.625rem 0.625rem 0;
+  font-size: 0.875rem;
+  backdrop-filter: blur(0.25rem);
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms ease-out;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    gap: 0.75rem;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      transition: border-color 250ms ease-out;
+      border: 0.125rem solid;
+      border-radius: 999999rem;
+    }
+  }
+}
+
+.progressBar {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  width: 100%;
+  height: 1rem;
+
+  .indicator {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    transition: right 100ms ease-out;
+  }
+}
+
+footer {
+  .wrapper {
+    min-height: max(100dvh, 37.5rem);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: $bg-light;
+    color: $txt-light;
+  }
+
+  section {
+    &:nth-of-type(odd) {
+      background-color: $bgVariant-light;
+    }
+  }
+
+  aside {
+    background: $surface-opacity-light;
+    box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 30%),
+      0 0.0625rem 0.1875rem 0.0625rem rgb(0 0 0 / 15%);
+
+    li {
+      color: $onSurface-light;
+
+      &::before {
+        border-color: $onSurface-light;
+      }
+
+      &:hover {
+        &::before {
+          border-color: $onSurfaceHover-light;
+        }
+
+        color: $onSurfaceHover-light;
+      }
+    }
+
+    .pressed {
+      &::before {
+        border-color: $onSurfaceHover-light;
+        background-color: $onSurfaceHover-light;
+      }
+
+      color: $onSurfaceHover-light;
+    }
+  }
+
+  .progressBar {
+    background-color: $surface-light;
+
+    .indicator {
+      background-color: $onSurfaceHover-light;
+    }
+  }
+
+  footer {
+    background-color: $bgVariant-light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $bg-dark;
+    color: $txt-dark;
+  }
+
+  section {
+    &:nth-of-type(odd) {
+      background-color: $bgVariant-dark;
+    }
+  }
+
+  aside {
+    background: $surface-opacity-dark;
+    box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgb(0 0 0 / 15%),
+      0 0.0625rem 0.125rem rgb(0 0 0 / 30%);
+
+    li {
+      color: $onSurface-dark;
+
+      &::before {
+        border-color: $onSurface-dark;
+      }
+
+      &:hover {
+        &::before {
+          border-color: $onSurfaceHover-dark;
+        }
+
+        color: $onSurfaceHover-dark;
+      }
+    }
+
+    .pressed {
+      &::before {
+        border-color: $onSurfaceHover-dark;
+        background-color: $onSurfaceHover-dark;
+      }
+
+      color: $onSurfaceHover-dark;
+    }
+  }
+
+  .progressBar {
+    background-color: $surface-dark;
+
+    .indicator {
+      background-color: $onSurfaceHover-dark;
+    }
+  }
+
+  footer {
+    background-color: $bgVariant-dark;
+  }
+}
+
+@media (width <= 62.5rem) {
+  .stickyWrap {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  main {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  aside {
+    display: flex;
+    top: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    justify-content: start;
+    width: unset;
+    height: fit-content;
+    padding-block: 1rem;
+    padding-inline: unset;
+    overflow-x: scroll;
+    border-radius: 0 0 0.625rem 0.625rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    ol {
+      flex-direction: row;
+      justify-content: start;
+      gap: 4rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 100%;
+    }
+  }
+
+  .progressBar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
