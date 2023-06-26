@@ -49,6 +49,20 @@ h2 {
   font-family: "Diphylleia", serif;
 }
 
+.wrappers {
+  width: min(60ch, 100% - 4rem);
+  min-height: max(50rem, 100dvh);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14pt;
+  font-family: "Akatab", sans-serif;
+  align-items: center;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
 .wrapper {
   font-size: 14pt;
   font-family: "Akatab", sans-serif;
@@ -319,5 +333,17 @@ footer {
   .progressBar {
     grid-column: 1;
     grid-row: 1;
+  }
+}
+
+#s1 {
+  .animTarget {
+    transform: scale(0);
+    transition: transform 500ms ease-in-out;
+  }
+  &.triggered {
+    .animTarget {
+      transform: scale(1);
+    }
   }
 }
