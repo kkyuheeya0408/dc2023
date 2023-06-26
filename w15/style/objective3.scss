@@ -25,11 +25,6 @@ main {
   scroll-snap-type: y mandatory;
 }
 
-section {
-  scroll-snap-align: center;
-  overflow: hidden;
-}
-
 section:nth-child(even) {
   background-color: dimgrey;
 }
@@ -96,20 +91,19 @@ video {
 }
 
 #s4 {
+  // .animTarget {
+}
+.animTarget:nth-child(1) {
+  transform: translateY(-100vw);
+  transition: transform 500ms ease-in-out;
+}
+.animTarget:nth-child(2) {
+  transform: translateY(100vw);
+  transition: transform 500ms ease-in-out;
+}
+&.triggered {
   .animTarget {
-  }
-  .animTarget:nth-child(1) {
-    transform: translateY(-100vw);
-    transition: transform 500ms ease-in-out;
-  }
-  .animTarget:nth-child(2) {
-    transform: translateY(100vw);
-    transition: transform 500ms ease-in-out;
-  }
-  &.triggered {
-    .animTarget {
-      transform: translateY(0);
-    }
+    transform: translateY(0);
   }
 }
 

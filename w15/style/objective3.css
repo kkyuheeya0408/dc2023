@@ -24,11 +24,6 @@ main {
   scroll-snap-type: y mandatory;
 }
 
-section {
-  scroll-snap-align: center;
-  overflow: hidden;
-}
-
 section:nth-child(even) {
   background-color: dimgrey;
 }
