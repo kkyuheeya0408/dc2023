@@ -14,6 +14,17 @@ body {
   font-size: 1.125rem;
 }
 
+p {
+  padding-top: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0125rem;
+}
+
+h2 {
+  padding-top: 32px;
+  font-family: "Diphylleia", serif;
+}
+
 .wrapper {
   font-family: "Akatab", sans-serif;
   display: flex;
@@ -21,12 +32,17 @@ body {
   align-items: center;
   justify-content: center;
   max-width: 80ch;
-  min-height: max(100dvh, 37.5rem);
+  min-height: max(30dvh, 10rem);
   margin-inline: auto;
   padding-inline: 2rem;
   text-align: center;
 }
 
+header {
+  justify-content: center;
+  display: flex;
+  padding-block: 24rem;
+}
 header h1 {
   text-align: center;
 }
@@ -70,6 +86,7 @@ aside ol {
   gap: 1.5rem;
 }
 aside li {
+  font-family: "Caprasimo", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,11 +129,11 @@ footer .wrapper {
 
 @media (prefers-color-scheme: light) {
   body {
-    background-color: #fffbff;
-    color: #ffffff;
+    background-color: #130213;
+    color: #ee00ff;
   }
   section:nth-of-type(odd) {
-    background-color: #2a175f;
+    background-color: #250f39;
   }
   aside {
     background: rgba(246, 242, 247, 0.5);
@@ -129,67 +146,67 @@ footer .wrapper {
     border-color: #1b1b1f;
   }
   aside li:hover {
-    color: #4756b2;
+    color: #ee00ff;
   }
   aside li:hover::before {
-    border-color: #4756b2;
+    border-color: #ee00ff;
   }
   aside .pressed {
-    color: #4756b2;
+    color: #ee00ff;
   }
   aside .pressed::before {
-    border-color: #4756b2;
-    background-color: #4756b2;
+    border-color: #ee00ff;
+    background-color: #ee00ff;
   }
   .progressBar {
     background-color: #2a175f;
   }
   .progressBar .indicator {
-    background-color: #4756b2;
+    background-color: #ee00ff;
   }
   footer {
-    background-color: #2a175f;
+    background-color: #250f39;
   }
 }
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1b1b1f;
-    color: #e4e1e6;
+    color: #ee00ff;
   }
   section:nth-of-type(odd) {
-    background-color: #46464f;
+    background-color: rgba(197, 63, 255, 0.6980392157);
   }
   aside {
     background: rgba(27, 27, 31, 0.5);
     box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
   }
   aside li {
-    color: #2a175f;
+    color: #250f39;
   }
   aside li::before {
-    border-color: #2a175f;
+    border-color: #250f39;
   }
   aside li:hover {
-    color: #2a175f;
+    color: #130213;
   }
   aside li:hover::before {
-    border-color: #2a175f;
+    border-color: #130213;
   }
   aside .pressed {
-    color: #2a175f;
+    color: #130213;
   }
   aside .pressed::before {
-    border-color: #2a175f;
-    background-color: #2a175f;
+    border-color: #130213;
+    background-color: #130213;
   }
   .progressBar {
-    background-color: #131316;
+    background-color: #130213;
   }
   .progressBar .indicator {
-    background-color: #2a175f;
+    background-color: #130213;
   }
   footer {
-    background-color: #46464f;
+    background-color: rgba(197, 63, 255, 0.6980392157);
   }
 }
 @media (width <= 62.5rem) {
