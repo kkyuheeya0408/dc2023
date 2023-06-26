@@ -25,7 +25,7 @@ a {
   }
 }
 .wrapper {
-  padding-block: 2rem;
+  padding-block: 0rem;
 }
 
 #section1 .wrapper {
@@ -35,7 +35,7 @@ a {
 
 .card {
   cursor: pointer;
-  max-width: 18.75rem;
+  max-width: 24rem;
   border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
   background-color: white;
@@ -51,7 +51,7 @@ a {
 }
 .card__img {
   width: 100%;
-  aspect-ratio: 10/9;
+  aspect-ratio: 30/29;
   -o-object-fit: cover;
      object-fit: cover;
   filter: grayscale(100%);

@@ -15,24 +15,29 @@ body {
 }
 
 p {
-  padding-top: 16px;
-  line-height: 24px;
+  padding-block: 16px;
+  line-height: 30px;
   letter-spacing: 0.0125rem;
 }
 
+h1 {
+  padding-top: 2rem;
+}
+
 h2 {
-  padding-top: 32px;
+  padding-top: 4rem;
   font-family: "Diphylleia", serif;
 }
 
 .wrapper {
+  font-size: 14pt;
   font-family: "Akatab", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 80ch;
-  min-height: max(30dvh, 10rem);
+  min-height: max(60dvh, 10rem);
   margin-inline: auto;
   padding-inline: 2rem;
   text-align: center;
@@ -136,14 +141,14 @@ footer .wrapper {
     background-color: #250f39;
   }
   aside {
-    background: rgba(246, 242, 247, 0.5);
+    background: rgba(215, 57, 255, 0.5);
     box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15);
   }
   aside li {
-    color: #1b1b1f;
+    color: #250929;
   }
   aside li::before {
-    border-color: #1b1b1f;
+    border-color: #250929;
   }
   aside li:hover {
     color: #ee00ff;
@@ -159,7 +164,7 @@ footer .wrapper {
     background-color: #ee00ff;
   }
   .progressBar {
-    background-color: #2a175f;
+    background-color: #2f083d;
   }
   .progressBar .indicator {
     background-color: #ee00ff;
@@ -170,14 +175,14 @@ footer .wrapper {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1b1b1f;
+    background-color: #180215;
     color: #ee00ff;
   }
   section:nth-of-type(odd) {
-    background-color: rgba(197, 63, 255, 0.6980392157);
+    background-color: rgba(35, 3, 48, 0.6980392157);
   }
   aside {
-    background: rgba(27, 27, 31, 0.5);
+    background: rgba(116, 72, 132, 0.5);
     box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
   }
   aside li {
@@ -187,26 +192,26 @@ footer .wrapper {
     border-color: #250f39;
   }
   aside li:hover {
-    color: #130213;
+    color: #ee00ff;
   }
   aside li:hover::before {
-    border-color: #130213;
+    border-color: #ee00ff;
   }
   aside .pressed {
-    color: #130213;
+    color: #ee00ff;
   }
   aside .pressed::before {
-    border-color: #130213;
-    background-color: #130213;
+    border-color: #ee00ff;
+    background-color: #ee00ff;
   }
   .progressBar {
     background-color: #130213;
   }
   .progressBar .indicator {
-    background-color: #130213;
+    background-color: #ee00ff;
   }
   footer {
-    background-color: rgba(197, 63, 255, 0.6980392157);
+    background-color: rgba(35, 3, 48, 0.6980392157);
   }
 }
 @media (width <= 62.5rem) {

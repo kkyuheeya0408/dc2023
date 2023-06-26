@@ -6,18 +6,18 @@
 
 $bg-light: #130213;
 $txt-light: #ee00ff;
-$surface-opacity-light: rgb(246 242 247 / 50%);
-$surface-light: #2a175f;
-$onSurface-light: #1b1b1f;
+$surface-opacity-light: rgba(215, 57, 255, 0.5);
+$surface-light: #2f083d;
+$onSurface-light: #250929;
 $onSurfaceHover-light: #ee00ff;
 $bgVariant-light: #250f39;
-$bg-dark: #1b1b1f;
+$bg-dark: #180215;
 $txt-dark: #ee00ff;
-$surface-opacity-dark: rgb(27 27 31 / 50%);
+$surface-opacity-dark: rgba(116, 72, 132, 0.5);
 $surface-dark: #130213;
 $onSurface-dark: #250f39;
-$onSurfaceHover-dark: #130213;
-$bgVariant-dark: #c53fffb2;
+$onSurfaceHover-dark: #ee00ff;
+$bgVariant-dark: #230330b2;
 $page-height: max(100dvh, 37.5rem);
 
 .hide {
@@ -35,24 +35,29 @@ body {
   font-size: 1.125rem;
 }
 p {
-  padding-top: 16px;
-  line-height: 24px;
+  padding-block: 16px;
+  line-height: 30px;
   letter-spacing: 0.0125rem;
 }
 
+h1 {
+  padding-top: 2rem;
+}
+
 h2 {
-  padding-top: 32px;
+  padding-top: 4rem;
   font-family: "Diphylleia", serif;
 }
 
 .wrapper {
+  font-size: 14pt;
   font-family: "Akatab", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 80ch;
-  min-height: max(30dvh, 10rem);
+  min-height: max(60dvh, 10rem);
   margin-inline: auto;
   padding-inline: 2rem;
   text-align: center;
